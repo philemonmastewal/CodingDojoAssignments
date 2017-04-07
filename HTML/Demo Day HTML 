@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8'/>
+      <titel>Web Fun | Demo</title>
+  </head>
+  <body>
+    <h1>Headers</h1>
+    <p>These are for paragraphs</p>
+    <ul>
+        <li>Walk the Dog</li>
+        <li>Get Milk</li>
+        <li>Change the Oil</li>
+    </ul>
+  </body>
+
+</html>

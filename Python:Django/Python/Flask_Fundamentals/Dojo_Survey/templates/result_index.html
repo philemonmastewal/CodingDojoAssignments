@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='survey_style.css')}}"  />
+  </head>
+  <body>
+    <div class="wrapper" style= "border: 1px solid black; padding: 10px; width:275px; height:200px;">
+      <h3><u>Submitted Info</u></h3>
+        <div style="margin:5px;">Name:  {{name}}</div>
+        <div style="margin:5px;">Dojo Location:  {{location}}</div>
+        <div style="margin:5px;">Favorite Language:  {{language}}</div>
+        <div style="margin:5px;">Comments:  {{comments}}</div>
+      </br>
+        <form method="post" action='/'>
+          <input type=submit value="Go Back" style="float: right; margin-right:30px; margin-top:20px; box-shadow:2px 2px; border-radius:1px; padding:2px 4px;" />
+        </form>
+    </div>
+
+
+  </body>
+</html>

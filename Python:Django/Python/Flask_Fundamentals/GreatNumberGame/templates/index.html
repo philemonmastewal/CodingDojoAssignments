@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Great Number Game</title>
+  </head>
+  <body >
+    <center>
+
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <form action="/number" method='post'>
+      <div style="color:white; background-color: red; display:inline-block; padding:60px 25px;"
+
+        <p>{{win}}</p>
+        <p>{{highguess}}</p>
+        <p>{{lowguess}}</p>
+      </div>
+      <br/>
+      <br/>
+      <input type="number" name="guess">
+      <input type="submit" name="button" value="SUBMIT" >
+    </form>
+    </center>
+  </body>
+</html>

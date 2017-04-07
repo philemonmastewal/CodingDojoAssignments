@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Full Friends</title>
+  </head>
+  <body>
+    <h1>These are the friends I made</h1>
+    <!-- <h1>This is what's coming through the server</h1>
+      {{showFriends}} <- this will show you what is being passed into the console -->
+      <!--the for loop below will go through the information above and pull and display the info we want
+      it will display a list with a dictionaries and their key:value pairs, the columns will be the keys, and the values will be all the info inside the DB  -->
+
+      <!-- Below we will for loop through the collected info and return it as plain text, through jinja, because we know what we called the columns -->
+      <div style = "border-style: solid; display: inline-block; padding-right: 25px;">
+
+        <ol>
+          {% for friend in showFriends %}
+            <li style= "color: blue;"><span style="color:black;">{{friend['first_name']}} {{friend['last_name']}} {{friend['email']}}</span></li>
+            <a href="/friends/{{friend['id']}}/edit">
+              <button type="button" name="edit">Edit!</button>
+            </a>
+            <!-- above we need to add the form into this existing for loop so that each <li> will have this option of editing ,based on the <li> selected....well actually forms are for POST, so we are going to just use a href, and then have a button inside of the anchor tag, this will insure it is definitely a GET-->
+            <!-- we want to do something similar as the edit link above, for the delete button below  -->
+            <!-- actually it says to make it a form so you can use POST because links can only be a GET, this is because you want the delete to be secure when it passes through  -->
+            <form action="/friends/{{friend['id']}}/delete" method = "Post">
+              <input type="submit" value = "Delete!" />
+            </form>
+          {% endfor %}
+          <!-- this python code is saying for each individual friend in the showFriends info that was collected, to display the info we want from  cert ain columns per individual friend, putting that in the
+          friend[' ']<-  -->
+        </ol>
+      </div>
+      <h1>Create a friend</h1>
+      <div style = "border-style: solid; display: inline-block; padding: 20px;">
+        <form action="/friends" method="Post">
+        <p>First Name: <input type="text" name="first_name"/></p>
+        <p>Last Name: <input type="text" name="last_name"/></p>
+        <p>Email: <input type="email" or email  name="email"/></p>
+        <!-- above, if you set input type="email", the input box will make sure what you input is in proper email format, but it may only check if there is an @ symbol -->
+        <p><input type="submit" value="GO!"/></p>
+      </div>
+      </form>
+
+  </body>
+</html>

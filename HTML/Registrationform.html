@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RegistrationForm</title>
+  </head>
+  <body>
+    <form action="process.php" method="post">
+      <h1>
+        My Registration Form
+      </h1>
+      <div>
+        <label>
+          First Name: <input type="text" name="First Name" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Last Name: <input type="text" name="Last Name" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Email: <input type="text" name="Email" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Paswoord: <input type="password" name="Password" />
+        </label>
+      </div>
+      <div>
+        <label>
+          PW Confirm: <input type="password" name="PW Confirm"  />
+        </label>
+      </div>
+      <div>
+        <label>
+          Birthday: <input type="text" name="mm/dd/yy" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Male: <input type="radio" name"gender" />
+        </label>
+        <label>
+          Female: <input type="radio" name"gender" />
+        </label>
+        <label>
+         Other: <input type="radio" name"gender" />
+        </label>
+      </div>
+      <div>
+        <p>
+          A short description about yourself:
+        </p>
+        <label>
+
+         <input type="textarea" name="description" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Favorite Language <select name="Favorite Language">
+            <option value="JavaScript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Swift">Swift</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label>
+          Submit <input type="submit" name="Submit" />
+        </label>
+    
+      </div>
+
+
+    </form>
+  </body>
+</html>

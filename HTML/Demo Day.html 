@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8'/>
+      <titel>Web Fun | Demo</title>
+        <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <h1>Headers</h1>
+    <p>These are for paragraphs</p>
+    <ul>
+        <li class= "class-example">Walk the Dog</li>
+        <li class= "class-example">Get Milk</li>
+        <li class= "class-example">Change the Oil</li>
+    </ul>
+  </body>
+
+</html>
