@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form Results</title>
+  </head>
+  <body>
+    <div align ="center" style="display:inline-block">
+      <div style="border:1px solid black; text-align:left; padding:15px;background-color:green; margin:5px;" >
+      <p>
+        Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.
+      </p>
+      </div>
+
+      <div style="border:1px solid black; text-align:left;display:inline-block; padding:25px;">
+        <form action= "/home" method= "post">
+          {% csrf_token %}
+          <h2><u>Submitted Information</u></h2>
+          Name:  {{request.session.name}}</br></br>
+          Dojo Location:  {{request.session.dojolocation}}</br></br>
+          Favorite Language:  {{request.session.favoritelanguage}}</br></br>
+          Comment:  {{request.session.comment}}</br></br>
+          <input type="submit" value= "Go Back" />
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div style="text-align:center">
+      <h1>Hi, I'm Philemon</h1>
+      <h2>Welcome to My Portfolio</h2>
+      <a href= "{% url 'about' %}">About Me</a>
+      <a href= "{% url 'projects' %}">Projects</a>
+      <a href= "{% url 'testimonials'%}">Testimonials</a>  </br></br>
+      Submit your name below
+</br>
+      <form action ="/new_user" method="post">
+        {% csrf_token %}
+        First Name: <input type="text" name="first_name" />
+        <input type="submit" value="submit" />
+      </form>
+      {{request.session.name}}
+    </div>
+  </body>
+</html>

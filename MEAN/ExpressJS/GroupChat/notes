@@ -1,0 +1,23 @@
+STEPS
+1) Have the NodeJS server render views/index.ejs that has the html content for the client whenever the client requests "/".
+
+    routings/index.js
+
+    app.get("/", function(req, res){
+      res.render('index', {});
+    });
+
+2) In the client codes, have a javascript code that asks the user for their name and store this user input in a variable called name.
+
+3) Have the client EMIT "got_a_new_user" and pass "name" to the server.
+
+4)Have the server LISTEN for an event called 'got_a_new_user' and when that event gets triggered,
+  A) have the server BROADCAST AN EVENT called "new_user" to the clients with the name of this new user attached to this event,
+  B) we store the name/session_id of the new user in a variable/array/hash called users,
+  C) to the person who sent this request we EMIT an event called 'existing_users' with all the users data.
+
+5) Have the client LISTEN for an event called 'new_user' and when this event gets triggered, have the client render this information in jQuery somewhere in the HTML.
+
+6) Have the server listen for an event called 'disconnect'(when people disconnect) and when this occurs, BROADCAST to all the clients an event 'disconnected_user' with some data (maybe the name of the disconnected user)(NOTE: we will probably need to pass sessionID or something else to identify a user)
+
+7) Have the client listen for an event 'disconnected_user' and when this gets triggered, have the client remove the proper jQuery box.

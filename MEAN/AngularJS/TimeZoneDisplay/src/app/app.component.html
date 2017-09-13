@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Time Zones</title>
+  </head>
+  <body style="text-align: center">
+
+    <h1>Time Zone Display</h1>
+
+    <button (click)='PST()' [ngClass='{slected: timezone==='PST'}']>PST</button>
+    <button (click)='MST()' [ngClass='{slected: timezone==='MST'}']>PST</button>
+    <button (click)='CST()' [ngClass='{slected: timezone==='CST'}']>PST</button>
+    <button (click)='EST()' [ngClass='{slected: timezone==='EST'}']>PST</button>
+
+
+    <button (click)='clear()'
+    [ngClass='{ selected: timezone==='clear' }']>clear</button>
+
+
+
+
+<p>
+  {{ timezone[0] time | date:'medium' }}
+</p>
+
+  </body>
+</html>

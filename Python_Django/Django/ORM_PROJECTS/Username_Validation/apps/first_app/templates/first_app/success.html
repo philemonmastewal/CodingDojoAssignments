@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success</title>
+  </head>
+  <body>
+
+        <h2 style="color:white; border:1px solid black;background-color:green; display:inline-block;padding:10px;">The username you entered <u>{{current.username}}</u> is valid! Thank you!</h2>
+
+    <h2><u>Usernames Entered:</u></h2>
+    <table>
+      {% for user in users %}
+      <tr>
+        <td>{{user.username}}</td>
+        <td>{{user.created_at}}</td>
+
+      </tr>
+      {% endfor %}
+    </table>
+  </br>
+  </br>
+    <a href="/">Go Back</a>
+  </body>
+</html>

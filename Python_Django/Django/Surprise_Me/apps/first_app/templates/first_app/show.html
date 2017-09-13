@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Surprises</title>
+  </head>
+  <body>
+    <div>
+      <fieldset align="center" style="display:inline-block">
+        <legend>
+          <h1>Surprises</h1>
+        </legend>
+        <h3>You asked for {{numberPicked}} surprises, here you go:</h3>
+      {% for string in values %}
+        <p>{{string}}</p>
+      {% endfor %}
+
+      </fieldset>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+  </head>
+  <body>
+
+    <form (submit) = "onSubmit()" >
+
+      <input type="text" name="firstName"
+      required
+      minlength='4'
+      maxlength = '6'
+      [(ngModel)]='user.firstName'
+      #firstName="ngModel"
+      />
+
+
+      <input type="text" name="lastName"
+      [(ngModel)]='user.lastName' />
+
+      {{firstName.errors | json }}
+      {{firstName.valid | json }}
+
+      <input type="submit" />
+
+    </form>
+  {{ user | json }}
+
+  </body>
+</html>

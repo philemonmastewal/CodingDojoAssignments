@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image of the Day</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    <h2>Here is your random image of the day:</h2>
+      {% if landscape_number > 0 and landscape_number < 11 %}
+      <img src="{% static 'first_app/images/desertLandscape.jpg' %}" alt="desert" />
+      {% elif landscape_number < 21 %}
+      <img src="{% static 'first_app/images/forestLandscape.jpg' %}" alt="forest" />
+      {% elif landscape_number < 31 %}
+      <img src="{% static 'first_app/images/snowyLandscape.jpg' %}" alt="snowy landscape" />
+      {% elif landscape_number < 41 %}
+      <img src="{% static 'first_app/images/tropicalLandscape.jpg' %}" alt="tropical landscape" />
+      {% elif landscape_number < 51 %}
+      <img src="{% static 'first_app/images/vineyardLandscape.jpg' %}" alt="vineyard" />
+      {% elif landscape_number < 0 or landscape_number > 51%}
+      <h3>... actually, you entered a number outside of the range 0-50, go back and enter a proper number</br></br><a href="/">Go Back</a> </h3>
+      {% endif %}
+
+  </body>
+</html>

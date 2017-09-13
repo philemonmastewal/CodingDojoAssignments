@@ -1,0 +1,23 @@
+<!--The whole content below can be removed with the new code.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <h1 *ngIf='true'> Show this!</h1>
+  <h1 *ngIf='myBoolean'> Don't show this!</h1>
+  <body>
+<ul>
+  <li *ngFor="let num of myArray">
+    {{num}}
+  </li>
+</ul>
+<p><span [ngClass]="{'bold': true, 'red': true }">I should be red and bolded</span></p>
+<p><span [ngClass]="{'bold': true, 'red': false }">I should be red but NOT bolded</span></p>
+
+<p><span [ngClass]="{'on': switch }">I should be yellow</span></p>
+
+  </body>
+
+</html>

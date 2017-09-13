@@ -1,0 +1,35 @@
+<html>
+<head>
+<title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+            // this triggers the connection event in our server!
+            var socket = io.connect();
+            // we'll write all the socket stuff after the above line!
+        })
+        $('button').click(function (){
+          socket.emit("button_clicked", {reason: "because I want to learn about sockets!"});
+        });
+        socket.on('server_response', function(data){
+          console.log('The server says:' + data.response);
+        });
+    </script>
+</head>
+<body>
+    <button>I AM A BUTTON!</button>
+    <!-- web page goes here -->
+</body>
+</html>
+
+
+<!-- So, we did a couple of things here:
+
+We used jQuery.  Not necessary, but totally useful.  Writing socket stuff without jQuery is like getting satellite radio in your car and then using the tape deck; you could do it, but why would you?
+
+We required a file with a source of "/socket.io/socket.io.js".  This is the magic moment!  Requiring this file sets everything up for us.  The Express server is totally ready to handle that request, and as long as we have the socket.io module installed, we should be good!
+
+Within our document.ready() method, we instantiated a variable called socket.  By requiring the js file in step 2, we were given an object called io, which has a method called connect().  Executing this method is what establishes the socket connection.  After we run this, we are totally connected!  This socket object will be our socket connection to our server. All emits and listeners will flow through this object. Remember this!
+
+Congratulations, you are now working with web sockets. Welcome to web 2.0. -->

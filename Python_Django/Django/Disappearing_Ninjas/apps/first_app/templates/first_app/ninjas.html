@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninjas</title>
+      {% load staticfiles %}
+      </head>
+    <body>
+
+
+      {% if allNinjas %}
+      <h1>The Team!</h1>
+      <img src="{% static 'first_app/images/tmnt.png' %}" alt="All ninjas" >
+    </br>
+      <a href="/">Go Back</a>
+
+      {% elif ninja_color == "blue" %}
+      <h1>Leonardo</h1>
+      {% load staticfiles %}
+      <img src="{% static 'first_app/images/leonardo.jpg' %}" alt="Leonardo" >
+    </br>
+      <a href="/">Go Back</a>
+
+      {% elif ninja_color == "red" %}
+      <h1>Raphael</h1>
+      <img src="{% static 'first_app/images/raphael.jpg' %}" alt="Raphael" >
+    </br>
+      <a href="/">Go Back</a>
+
+      {% elif ninja_color == "orange" %}
+      <h1>Michelangelo</h1>
+      <img src="{% static 'first_app/images/michelangelo.jpg' %}" alt="Michelangelo" >
+    </br>
+      <a href="/">Go Back</a>
+
+      {% elif ninja_color == "purple" %}
+      <h1>Donatello</h1>
+      <img src="{% static 'first_app/images/donatello.jpg' %}" alt="Donatello" >
+    </br>
+      <a href="/">Go Back</a>
+
+      {% else %}
+      <h1>April</h1>
+      <img src="{% static 'first_app/images/notapril.jpg' %}" alt="not April" >
+    </br>
+      <a href="/">Go Back</a>
+      {% endif %}
+
+
+
+
+  </body>
+</html>

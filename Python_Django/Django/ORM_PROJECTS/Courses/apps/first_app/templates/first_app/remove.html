@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete a Course</title>
+  </head>
+  <body align="center">
+
+      <h2>Are you sure you want to delete the following course?</h2>
+      <div style="border:1px solid black; display: inline-block; padding: 15px 30px; margin-bottom:10px;" align="left">
+        <b>Name:</b> {{course.name}}
+      </br>
+        <b>Description:</b> {{course.description}}
+      </div>
+    </br>
+    <div style="display:inline;">
+      <form action="/" method = "post" style="display:inline; margin-right:5px; padding-right:10px">
+        {% csrf_token %}
+        <input type="submit" value="No" style="padding:5px;" />
+      </form>
+      <form action="/destroy/{{course.id}}" method = "post" style="display:inline;">
+        {% csrf_token %}
+        <input type="submit" value="Yes! I want to delete this course" style="background:red; color:white; padding:5px;" />
+      </form>
+    </div>
+
+
+
+
+  </body>
+</html>
